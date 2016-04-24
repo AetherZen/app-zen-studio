@@ -12,6 +12,10 @@ export class ZenStudio {
     // List of all of the open views (these items are used as view models)
   }
 
+  created() {
+    console.log("Zen Studio Created");
+  }
+
   get openViews() {
     return openViews;
   }
