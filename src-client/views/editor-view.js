@@ -1,16 +1,10 @@
-var viewCount = 0;
-
 export class EditorView {
   constructor() {
-    viewCount += 1;
-    this.count = viewCount;
   }
 
   created(owningView, thisView) {
-    console.log("Created:");
-    console.log(thisView);
-    console.log("my parent:")
-    console.log(owningView);
+    this.view = thisView;
+    this.parentView = owningView;
   }
 
   activate(model) {

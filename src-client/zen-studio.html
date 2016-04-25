@@ -1,6 +1,8 @@
 <template>
-  <p>TODO Please implement me!</p>
-  <button></button>
+  <div repeat.for="view of openViews">
+    <p>${view.model.message}</p>
+  </div>
+  <hr>
   <div repeat.for="view of openViews">
     <compose view-model.bind="$parent.getViewFromType(view)" model.bind="view.model">
     </compose>
