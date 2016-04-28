@@ -11,4 +11,8 @@ export class EditorView {
     // Keep track of this model
     this.model = model;
   }
+
+  attached() {
+    console.log(this.myMessage);
+  }
 }
