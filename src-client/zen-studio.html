@@ -1,10 +1,6 @@
 <template>
-  <div repeat.for="view of openViews">
-    <p>${view.model.message}</p>
-  </div>
-  <hr>
-  <div repeat.for="view of openViews">
-    <compose view-model.bind="$parent.getViewFromType(view)" model.bind="view.model">
-    </compose>
-  </div>
+  <require from="aurelia-dock-css/dock.css"></require>
+  <!-- Import zen-studio css here -->
+  <compose view-model="aurelia-dock/dock-manager" model.bind="workspace">
+  </compose>
 </template>

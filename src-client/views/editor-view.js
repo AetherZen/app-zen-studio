@@ -13,6 +13,5 @@ export class EditorView {
   }
 
   attached() {
-    console.log(this.myMessage);
   }
 }
