@@ -11,7 +11,23 @@ var openViews = [
 // TODO Possibly this should be a class instead of just JSON
 var global_workspace = {
   panels: [
-    { type: "dock-left", style: { width: '200px'}, contents: [ 'test1' ] }
+    {
+      id: 1,
+      view: "aurelia-dock/dock-hsplitter",
+      split: 100,
+      left:
+        {
+          id: 2,
+          view: "app-zen-studio/views/editor-view",
+          message: "Hello, world 2!"
+        },
+      right:
+        {
+          id: 3,
+          view: "app-zen-studio/views/editor-view",
+          message: "Hello, world 3!"
+        }
+    }
   ]
 };
 
