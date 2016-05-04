@@ -12,20 +12,33 @@ var openViews = [
 var global_workspace = {
   panels: [
     {
-      id: 1,
       view: "aurelia-dock/dock-hsplitter",
-      split: 100,
+      split: 200,
       left:
         {
-          id: 2,
           view: "app-zen-studio/views/editor-view",
-          message: "Hello, world 2!"
+          message: "Hello from the west!"
         },
       right:
         {
-          id: 3,
-          view: "app-zen-studio/views/editor-view",
-          message: "Hello, world 3!"
+          view: "aurelia-dock/dock-vsplitter",
+          split: 200,
+          top: {
+            view: "aurelia-dock/dock-hsplitter",
+            split: 200,
+            left: {
+              view: "app-zen-studio/views/editor-view",
+              message: "Hello, from the middle!"
+            },
+            right: {
+              view: "app-zen-studio/views/editor-view",
+              message: "Hello, from the far east!"
+            }
+          },
+          bottom: {
+            view: "app-zen-studio/views/editor-view",
+            message: "Hello, from the south!"
+          }
         }
     }
   ]
